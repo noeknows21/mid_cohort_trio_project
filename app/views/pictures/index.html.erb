@@ -17,6 +17,7 @@ Take a sip of that colada, and embrace your Miami-ness.. DALE!</h3>
       <th>Picture</th>
       <th>Description</th>
       <th>Location</th>
+      <th>Options</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -35,7 +36,7 @@ Take a sip of that colada, and embrace your Miami-ness.. DALE!</h3>
       <td><%= picture.location %></td>
       <td><div class="showlink"><%= link_to 'Show', picture %> </div>
         <div class="editlink"><%= link_to 'Edit', edit_picture_path(picture) %> </div>
-        <%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Delete', picture, method: :delete, data: { confirm: 'Are you sure?' } %>
       </td>
     </tr>
     <% end %>
