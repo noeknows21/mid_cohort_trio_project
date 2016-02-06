@@ -1,11 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pictures</h1>
+<h1>Miami From All Angles</h1>
+<h2>Welcome. MFAA is a place where anyone can post pictures of anything Miami. 
+Embrace your Miaminess.. DALE!</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th>Description</th>
+      <th>Location</th>
       <th>Picture</th>
       <th colspan="3"></th>
     </tr>
@@ -14,7 +17,8 @@
   <tbody>
     <% @pictures.each do |picture| %>
       <tr>
-        <td><%= picture.title %></td>
+        <td><%= picture.description %></td>
+        <td><%= picture.location %></td>
         <td><%= image_tag picture.url %></td>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
