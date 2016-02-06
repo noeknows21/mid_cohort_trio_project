@@ -24,19 +24,21 @@ Take a sip of that colada, and embrace your Miami-ness.. DALE!</h3>
   <tbody>
     <% @pictures.each do |picture| %>
     <tr>
-      <!-- <td><%= picture.description %></td> -->
       <td><a class="lightbox" href="#goofy">
         <img src= "<%= picture.url %>"></a>
         <div class="lightbox-target" id="goofy">
         <img src="<%= picture.url %>">
         <a class="lightbox-close" href="#"></a>
-        </div></td>
-        <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-      <% end %>
-    </tbody>
+        </div>
+      </td>
+      <td><%= picture.description %></td>
+      <td><%= picture.location %></td>
+      <td><%= link_to 'Show', picture %></td>
+      <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
+      <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <br>
