@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Miami From All Angles</h1>
-<h2>Welcome. MFAA is a place where anyone can post pictures of anything Miami. 
+<h2>Welcome. MFAA is a place where anyone can post pictures of anything Miami.
 Embrace your Miaminess.. DALE!</h2>
 
 <table>
@@ -16,16 +16,20 @@ Embrace your Miaminess.. DALE!</h2>
 
   <tbody>
     <% @pictures.each do |picture| %>
-      <tr>
-        <td><%= picture.description %></td>
-        <td><%= picture.location %></td>
-        <td><%= image_tag picture.url %></td>
+    <tr>
+      <td><%= picture.title %></td>
+      <td><a class="lightbox" href="#goofy">
+        <img src= "<%= picture.url %>"></a>
+        <div class="lightbox-target" id="goofy">
+        <img src="<%= picture.url %>">
+        <a class="lightbox-close" href="#"></a>
+        </div></td>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
         <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
-  </tbody>
+      <% end %>
+    </tbody>
 </table>
 
 <br>
