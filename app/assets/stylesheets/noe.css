@@ -1,0 +1,26 @@
+td ~ td {
+  position:relative;
+  bottom: 200px;
+}
+
+td:last-child {
+  bottom: 160px;
+}
+
+td:nth-child(3), td:nth-child(4) {
+  width: 15%;
+}
+
+td, a, p {
+  font-size: 1em !important;
+}
+
+
+table {
+  width: 100%;
+}
+
+.showlink, .editlink {
+  margin-bottom: 25px;
+}
+
