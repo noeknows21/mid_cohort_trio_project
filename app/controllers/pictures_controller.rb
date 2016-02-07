@@ -72,3 +72,4 @@ class PicturesController < ApplicationController
       params.require(:picture).permit(:description, :url, :location)
     end
 end
+
