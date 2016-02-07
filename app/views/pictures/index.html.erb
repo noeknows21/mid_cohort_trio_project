@@ -32,13 +32,14 @@ Take a sip of that colada, and embrace your Miami-ness.. DALE!</h3>
   <tbody>
     <% @pictures.each do |picture| %>
     <tr>
-      <td><a class="lightbox" href="#goofy">
+      
+      <!-- <td><a class="lightbox" href="#goofy">
         <img src= "<%= picture.url %>"></a>
         <div class="lightbox-target" id="goofy">
         <img src="<%= picture.url %>">
         <a class="lightbox-close" href="#"></a>
-        </div>
-      </td>
+        </div> -->
+      <td><img src="<%= picture.url %>"> </td>
       <td><%= picture.description %></td>
       <td><%= picture.location %></td>
       <td><div class="showlink"><%= link_to 'Show', picture %> </div>
