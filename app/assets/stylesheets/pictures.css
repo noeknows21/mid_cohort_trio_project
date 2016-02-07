@@ -33,21 +33,17 @@ strong {
 
 #fashion-image {
   height: 680px;
-  padding-top: 1px;
-  background: url('http://photomagz.club/wp-content/uploads/2016/02/camera-for-black-and-white-photography.jpg') no-repeat center;
+  padding-top: 100px;
+  background: url('http://i68.tinypic.com/2r2m9vr.jpg') no-repeat center;
   text-align: center;
 }
 #fashion-image h2 {
   margin: 180px 0 40px 0;
+  text-shadow: #000 0px 0px 1px
 }
 
 body{
   text-align: center;
-}
-
-table{
-  padding-top: 50px;
-  margin-top: 120px;
 }
 
 /*lightbox*/
