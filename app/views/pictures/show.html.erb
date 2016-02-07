@@ -1,5 +1,9 @@
-<p id="notice"><%= notice %></p>
+<head>
+  <link rel="stylesheet" type="text/css" href="jermaine.css">
+</head>
 
+<p id="notice"><%= notice %></p>
+<body>
 <p>
   <strong>Description:</strong>
   <%= @picture.description %>
@@ -13,7 +17,7 @@
 
 <p>
   <strong>Picture</strong>
-  <%= image_tag @picture.url %>
+<div id="showpic"> <%= image_tag @picture.url %></div>
 </p>
 
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
@@ -26,22 +30,25 @@
     margin: 0;
     padding: 0;
   }
+
   #map {
-    height: 60%;
+    margin-left: 250px;
+    margin-right: 250px;
+    height: 50%;
   }
-#floating-panel {
-position: absolute;
-top: 10px;
-left: 25%;
-z-index: 5;
-background-color: #fff;
-padding: 5px;
-border: 1px solid #999;
-text-align: center;
-font-family: 'Roboto','sans-serif';
-line-height: 30px;
-padding-left: 10px;
-}
+  #floating-panel {
+  /*position: absolute;*/
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+  }
 
 #address {
   display: none;
@@ -71,18 +78,19 @@ geocodeAddress(geocoder, map);
 function geocodeAddress(geocoder, resultsMap) {
 var address = document.getElementById('address').value;
 geocoder.geocode({'address': address}, function(results, status) {
-if (status === google.maps.GeocoderStatus.OK) {
-  resultsMap.setCenter(results[0].geometry.location);
-  var marker = new google.maps.Marker({
-    map: resultsMap,
-    position: results[0].geometry.location
-  });
-} else {
-  alert('Geocode was not successful for the following reason: ' + status);
-}
+  if (status === google.maps.GeocoderStatus.OK) {
+    resultsMap.setCenter(results[0].geometry.location);
+    var marker = new google.maps.Marker({
+      map: resultsMap,
+      position: results[0].geometry.location
+    });
+  } else {
+    alert('Geocode was not successful for the following reason: ' + status);
+  }
 });
 }
 
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=    AIzaSyAI5fN1yyPrUoHIFo-nS1wq8vJ6o--0ae4&signed_in=true&callback=initMap"
-    async defer></script>
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=    AIzaSyAI5fN1yyPrUoHIFo-nS1wq8vJ6o--0ae4&signed_in=true&callback=initMap"
+      async defer></script>
+</body>
