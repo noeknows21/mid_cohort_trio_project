@@ -6,17 +6,32 @@ td:last-child {
   bottom: 160px;
 }*/
 
+td:nth-child(2), td:nth-child(3) {
+  padding: 10px;
+}
+
 td:nth-child(3), td:nth-child(4) {
-  width: 15%;
+  width: 10%;
+  font-size: 2em;
 }
 
-td, a, p {
-  font-size: 1em;
+td:nth-child(2) {
+  text-align: left;
+  font-size: 1.75em;
 }
 
+td:nth-child(4) {
+  width: 8%;
+  font-size: 2em;
+}
 
 table {
   width: 100%;
+}
+
+td {
+  border-radius: 15px 50px;
+  border: solid 3px;
 }
 
 .showlink, .editlink {
@@ -29,12 +44,17 @@ table {
   margin-bottom: 110px;
 }
 
+h3, h1 {
+  position: relative;
+}
+
+
 h1 {
   font-size: 100px;
+  bottom:75px;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 28px;
+  bottom: 120px;
 }
-
-
