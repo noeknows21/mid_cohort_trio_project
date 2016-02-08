@@ -1,33 +1,33 @@
-<head>
-  <link rel="stylesheet" type="text/css" href="jermaine.css">
-</head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
 
 <p id="notice"><%= notice %></p>
 <body>
-<p>
+<!-- <p>
   <strong>Description:</strong>
   <%= @picture.description %>
-</p>
+</p> -->
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Back', pictures_path %>
+
 
 <p>
   <strong>Uploaded:</strong>
   <%= time_ago_in_words @picture.created_at %> ago
-  <%= @picture.created_at.strftime(" on %m/%d/%Y at %I:%M%p") %>
+  <%= @picture.created_at.strftime("on %m/%d/%Y at %I:%M%p") %>
 </p>
 
 <p>
+
+<!-- <p>
   <strong>Location:</strong>
   <%= @picture.location %>
-</p>
+</p> -->
 
 
-<p>
-  <strong>Picture</strong>
 <div id="showpic"> <%= image_tag @picture.url %></div>
-</p>
 
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
 
 <style>
   html, body {
@@ -37,21 +37,21 @@
   }
 
   #map {
-    margin-left: 250px;
-    margin-right: 250px;
-    height: 50%;
+    margin-left: 342px;
+    margin-right: 342px;
+    height: 60%;
   }
   #floating-panel {
   /*position: absolute;*/
   top: 10px;
   left: 25%;
-  z-index: 5;
+  /*z-index: 5;*/
   background-color: #fff;
   padding: 5px;
   border: 1px solid #999;
   text-align: center;
   font-family: 'Roboto','sans-serif';
-  line-height: 30px;
+  /*line-height: 30px;*/
   padding-left: 10px;
   }
 
@@ -59,12 +59,24 @@
   display: none;
 }
 
+.indexpics {
+  margin: 0;
+}
+
+/*#submit:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}*/
+
+#submit {
+  border-radius: 12px;
+}
+
 </style>
 
 <body>
 <div id="floating-panel">
   <input id="address" type="textbox" value="<%= @picture.location%>">
-  <input id="submit" type="button" value="Show me where this picture was taken">
+  <input id="submit" type="button" class="btn btn-primary btn-lg btn-block" value="Show me where this picture was taken">
 </div>
 <div id="map"></div>
 <script>

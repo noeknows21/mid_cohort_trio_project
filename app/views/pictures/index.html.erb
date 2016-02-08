@@ -2,19 +2,22 @@
 <body>
 <header>
   <h1>Miami From All Angles</h1>
-<h3>Welcome. MFAA is a place where anyone can contribute pictures of anything Miami.
-Take a sip of that colada, and embrace your Miami-ness.. DALE!</h3>
+  <h3>Welcome. MFAA is a place where anyone can contribute pictures of</h3>
+  <h3> anything Miami-related. Bust out that colada, embrace your inner Miami and enjoy.</h3>
 </header>
 
 <p id="notice"><%= notice %></p>
 
 <div id="fashion-image">
-  <h2><strong>How do you</strong></h2>
-  <h2><strong> view your city?</strong></h2>
+  <!-- <h2><strong>How do you view your city?</strong></h2> -->
 </div>
 
 <p id="new-pic">
-<%= link_to 'Contribute New Picture!', new_picture_path %>
+<%= link_to 'Contribute A New Picture!', new_picture_path %>
+</p>
+
+<p id="laidbacklink">
+<%= link_to 'Enter Laidback Mode', laidback_slideshow_path %>
 </p>
 
 
@@ -32,18 +35,19 @@ Take a sip of that colada, and embrace your Miami-ness.. DALE!</h3>
   <tbody>
     <% @pictures.each do |picture| %>
     <tr>
-      <td><a class="lightbox" href="#goofy">
+      
+      <!-- <td><a class="lightbox" href="#goofy">
         <img src= "<%= picture.url %>"></a>
         <div class="lightbox-target" id="goofy">
         <img src="<%= picture.url %>">
         <a class="lightbox-close" href="#"></a>
-        </div>
-      </td>
+        </div> -->
+      <td><img class="indexpics" src="<%= picture.url %>"> </td>
       <td><%= picture.description %></td>
       <td><%= picture.location %></td>
-      <td><div class="showlink"><%= link_to 'Show', picture %> </div>
+      <td><div class="showlink"><%= link_to 'Geolocate', picture %> </div>
         <div class="editlink"><%= link_to 'Edit', edit_picture_path(picture) %> </div>
-        <%= link_to 'Delete', picture, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <!-- <%= link_to 'Delete', picture, method: :delete, data: { confirm: 'Are you sure?' } %> -->
       </td>
     </tr>
     <% end %>
