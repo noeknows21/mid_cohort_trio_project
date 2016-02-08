@@ -3,7 +3,7 @@
 <header>
   <h1>Miami From All Angles</h1>
   <h3>Welcome. MFAA is a place where anyone can contribute pictures of</h3>
-  <h3> anything Miami-related. Bust out that colada, embrace your inner Miami and enjoy</h3>
+  <h3> anything Miami-related. Bust out that colada, embrace your inner Miami and enjoy.</h3>
 </header>
 
 <p id="notice"><%= notice %></p>
@@ -13,7 +13,7 @@
 </div>
 
 <p id="new-pic">
-<%= link_to 'Contribute New Picture!', new_picture_path %>
+<%= link_to 'Contribute A New Picture!', new_picture_path %>
 </p>
 
 
@@ -41,9 +41,9 @@
       <td><img src="<%= picture.url %>"> </td>
       <td><%= picture.description %></td>
       <td><%= picture.location %></td>
-      <td><div class="showlink"><%= link_to 'Show', picture %> </div>
+      <td><div class="showlink"><%= link_to 'Geolocate', picture %> </div>
         <div class="editlink"><%= link_to 'Edit', edit_picture_path(picture) %> </div>
-        <%= link_to 'Delete', picture, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <!-- <%= link_to 'Delete', picture, method: :delete, data: { confirm: 'Are you sure?' } %> -->
       </td>
     </tr>
     <% end %>
