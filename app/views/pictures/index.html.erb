@@ -20,6 +20,10 @@
     <h2><%= link_to 'Contribute A New Picture!', new_picture_path %></h2>
   </p>
 
+<p id="laidbacklink">
+<%= link_to 'Enter Laidback Mode', laidback_slideshow_path %>
+</p>
+
 
 <table>
   <thead>
@@ -42,7 +46,7 @@
         <img src="<%= picture.url %>">
         <a class="lightbox-close" href="#"></a>
         </div> -->
-      <td><img src="<%= picture.url %>"> </td>
+      <td><img class="indexpics" src="<%= picture.url %>"> </td>
       <td><%= picture.description %></td>
       <td><%= picture.location %></td>
       <td><div class="showlink"><%= link_to 'Geolocate', picture %> </div>

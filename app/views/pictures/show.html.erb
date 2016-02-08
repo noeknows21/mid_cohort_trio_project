@@ -11,6 +11,15 @@
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
 
+
+<p>
+  <strong>Uploaded:</strong>
+  <%= time_ago_in_words @picture.created_at %> ago
+  <%= @picture.created_at.strftime("on %m/%d/%Y at %I:%M%p") %>
+</p>
+
+<p>
+
 <!-- <p>
   <strong>Location:</strong>
   <%= @picture.location %>
@@ -50,7 +59,7 @@
   display: none;
 }
 
-img {
+.indexpics {
   margin: 0;
 }
 
