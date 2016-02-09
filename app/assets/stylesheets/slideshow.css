@@ -1,14 +1,14 @@
 
 .css-slideshow{
   position: relative;
-  max-width: 495px;
-  height: 370px;
-  margin: 5em auto .5em auto;
+  max-width: 700px;
+  height: 700px;
+  margin: 3em auto .5em auto;
 }
 .css-slideshow figure{
   margin: 0;
-  max-width: 495px;
-  height: 370px;
+  max-width: 700px;
+  height: 700px;
   background: #000;
   position: absolute;
 }
@@ -30,7 +30,7 @@
   opacity: 1;
 }
 .css-slideshow-attr{
-  max-width: 495px;
+  max-width: 700px;
   text-align: right;
   font-size: .7em;
   font-style: italic;
@@ -84,3 +84,25 @@ figure:nth-child(8) {
     opacity: 1;
   }
 }
+
+#logo1 {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 50px;
+  top: 325px;
+}
+
+#logo2 {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  right: 50px;
+  top: 325px;
+}
+
+figure img {
+  height: 700px;
+  width: 700px;
+}
+
