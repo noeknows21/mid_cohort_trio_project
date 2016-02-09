@@ -14,9 +14,14 @@ td:nth-child(2), td:nth-child(3), td:nth-child(4) {
   padding: 10px;
 }
 
-td:nth-child(3), td:nth-child(4) {
+td:nth-child(4) {
   width: 10%;
   font-size: 2em;
+}
+
+td:nth-child(3) {
+  width: 13%;
+  font-size: 1.75em;
 }
 
 td:nth-child(2) {
@@ -34,7 +39,7 @@ table {
 }
 
 td {
-  border-radius: 15px 50px;
+  border-radius: 12px;
   border: solid 3px;
 }
 
