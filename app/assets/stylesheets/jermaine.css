@@ -3,11 +3,10 @@
    max-height:100%;
 }*/
 #showpic {
-  margin-left: 180px;
-  margin-right: 250px;
-  margin-bottom: 75px;
+  margin:auto;
+  margin-bottom: 25px;
   height: 500px;
-  width: 500px;
+  width: 750px;
 }
 
 #bg {
