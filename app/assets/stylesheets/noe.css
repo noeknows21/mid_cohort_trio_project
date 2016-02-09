@@ -85,4 +85,11 @@ h3 {
   font-size: 1.25em;
 }
 
+.button {
+  font-size: 1.5em;
+  /*font-family: "Times New Roman", Times, serif;*/
+  -webkit-appearance: button;
+  background-color: blue;
+  border-radius: 12px;
+}
   
