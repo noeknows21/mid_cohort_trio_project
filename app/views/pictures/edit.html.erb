@@ -1,11 +1,20 @@
+
 <div id="top"><h1>Edit Picture</h1></div>
 
 <%= render 'form' %>
 
-<div id="goto"><%= link_to 'Show', @picture %>
-<%= link_to 'Back', pictures_path %></div>
+<div id="goto">
+<!-- <%= link_to 'Show', @picture %> -->
+<%= link_to 'Back', pictures_path %>
+</div>
 
 
+<style>
 
+body {
+  background-image: url("http://s11.postimg.org/rk7m7nb03/harbor_I_140626_Exterior_Pool_01_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-<body background="http://s11.postimg.org/rk7m7nb03/harbor_I_140626_Exterior_Pool_01_1.jpg" id="bg" alt="Background pic">
+</style>

@@ -14,15 +14,15 @@ pre {
 
 a {
   color: #000;
+}
 
-  &:visited {
+/*a:visited  {
     color: #666;
-  }
+}*/
 
-  &:hover {
+a:hover {
     color: #fff;
     background-color: #000;
-  }
 }
 
 div.field, div.actions {

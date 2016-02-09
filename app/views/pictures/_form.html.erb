@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.label :description, class: 'formtext' %><br>
+    <%= f.text_area :description, class: 'formboxes' %>
   </div>
   <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.label :url, class: 'formtext' %><br>
+    <%= f.text_field :url, class: 'formboxes' %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.label :location, class: 'formtext'%><br>
+    <%= f.text_field :location, class: 'formboxes'%>
   </div>
   <div class="actions">
-    <%= f.submit 'Post Picture' %>
+    <%= f.submit 'Post Picture', class: 'formboxes' %>
   </div>
 <% end %>
