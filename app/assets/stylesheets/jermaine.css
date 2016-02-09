@@ -23,11 +23,18 @@
   color: white;
 }
 
+#goto:hover {
+  color: #fff; 
+}
+
 #goto {
   color: white;
+  color: white; font-size: 18px;
+  color: #000;
 }
 
 .field{
   font-size: 18px;
-  color: white;
+  color: black;
+  font-weight: bold;
 }
