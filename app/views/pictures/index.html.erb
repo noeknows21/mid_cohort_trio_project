@@ -1,17 +1,25 @@
 
 <body>
 <header>
-  <h1>Miami From All Angles</h1>
-  <h3>Welcome. MFAA is a place where anyone can contribute pictures of</h3>
-  <h3> anything Miami-related. Bust out that colada, embrace your inner Miami and enjoy.</h3>
+  <div id="wrapperHeader">
+   <div id="header">
+    <img src="http://s10.postimg.org/hmv3gzby1/Miami_Angles.jpg" alt="logo" />
+   </div>
+  </div>
 </header>
 
 <p id="notice"><%= notice %></p>
 
 <div id="fashion-image">
-  <!-- <h2><strong>How do you view your city?</strong></h2> -->
 </div>
+<div id="bodytext">  <h3>Welcome. MFAA is a place where anyone can contribute pictures of</h3>
+  <h3> anything Miami-related. Bust out that colada, embrace your inner Miami and enjoy.</h3>
+  </div
 
+
+  <p id="new-pic">
+    <h2><%= link_to 'Contribute A New Picture!', new_picture_path %></h2>
+  </p>
 
 <p id="laidbacklink">
 <%= link_to 'Enter Laidback Mode', laidback_slideshow_path %>
@@ -36,7 +44,7 @@
   <tbody>
     <% @pictures.each do |picture| %>
     <tr>
-      
+
       <!-- <td><a class="lightbox" href="#goofy">
         <img src= "<%= picture.url %>"></a>
         <div class="lightbox-target" id="goofy">
