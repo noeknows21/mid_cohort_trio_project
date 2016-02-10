@@ -1,6 +1,6 @@
 class LaidbackController < ApplicationController
   def slideshow
-    @url1 = Picture.find(1).url
+    @url1 = Picture.find(1).url 
     @url2 = Picture.find(2).url
     @url3 = Picture.find(3).url
     @url4 = Picture.find(4).url
