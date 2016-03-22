@@ -1,1 +1,1 @@
-https://miami-from-all-angles.herokuapp.com/
+https://miami-from-all-angles.herokuapp.com
